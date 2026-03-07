@@ -1,0 +1,47 @@
+.header {
+  padding: 38px 0 30px 0;
+  background: #eba8b1;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  list-style: none;
+  display: flex;
+  width: 313px;
+  justify-content: space-between;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: GilroyMedium, sans-serif;
+  color: rgb(119, 11, 29);
+  border-bottom: 1px solid transparent;
+  transition: all .5s;
+}
+
+.menu__link:hover {
+  border-bottom: 2px solid #821328;
+  transform: scale(1);
+}
+
+.header__phone {
+  font-size: 16px;
+  font-family: GilroyBold, sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.menu__close {
+  display: none;
+}
+
+.header__burger {
+  display: none;
+}
+

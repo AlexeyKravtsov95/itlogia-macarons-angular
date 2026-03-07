@@ -1,0 +1,46 @@
+@media screen and (max-width: 450px) {
+  .footer {
+    padding: 50px 0 50px 0;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .footer__rights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__copyright {
+    position: absolute;
+    width: 168px;
+    top: 200px;
+  }
+
+  .footer__phone {
+    order: 1;
+    padding: 40px 0 40px 0;
+  }
+
+  .footer__social {
+    order: 2;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .present__logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .present__logo::before {
+    width: 75px;
+    height: 75px;
+    left: 93%;
+  }
+}
