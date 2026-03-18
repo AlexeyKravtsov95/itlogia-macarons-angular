@@ -93,72 +93,6 @@
   padding-top: 60px;
 }
 
-.advantages {
-  padding: 58px 0 120px 0;
-  background-color: rgb(255, 239, 239);
-}
-
-.advantages__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 220px);
-  grid-column-gap: 86px;
-  justify-content: space-between;
-}
-
-.advantage {
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-}
-
-.advantage__number {
-  font-size: 60px;
-  font-family: GilroyExtraBold, sans-serif;
-  color: rgb(255, 255, 255);
-  margin-bottom: 13px;
-  line-height: 1;
-  position: relative;
-  width: 70px;
-  height: 70px;
-  z-index: 0;
-  text-align: center;
-  transition: color .5s ease;
-}
-
-.advantage__number::before {
-  content: '';
-  height: 70px;
-  width: 70px;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  z-index: -1;
-  border-radius: 50%;
-  background: #821328;
-  transition: background-color .5s ease;
-}
-
-.advantage__title {
-  font-size: 20px;
-  font-family: GilroyExtraBold, sans-serif;
-  color: rgb(51, 25, 7);
-}
-
-
-.advantage__text {
-  font-size: 15px;
-  font-family: GilroyMedium, sans-serif;
-  color: rgb(51, 25, 7);
-  width: 220px;
-}
-
-.advantage:hover .advantage__number::before {
-  background: #eba8b1;
-}
-
-.advantage:hover .advantage__number {
-  color: #821328;
-}
-
 .macaroons {
   padding: 120px 0 120px 0;
   background: #eba8b1;
@@ -171,83 +105,11 @@
   justify-content: center;
 }
 
-.macaroon {
-  display: grid;
-  grid-template-rows: 1fr;
-  justify-items: center;
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-  padding: 27px 20px;
-  position: relative;
-}
-
-.macaroon__content {
-  margin-top: 80px;
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  justify-items: center;
-}
-
 .macaroons__title {
   font-size: 45px;
   color: rgb(255, 255, 255);
   text-align: center;
   margin-bottom: 143px;
-}
-
-.macaroon__image {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  transition: transform 0.5s ease;
-}
-
-.macaroon:hover .macaroon__image {
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
-.macaroon__title {
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-  margin-bottom: 26px;
-}
-
-.macaroon__order-block {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  align-items: center;
-  column-gap: 36px;
-}
-
-.macaroon__count {
-  grid-column: 1;
-  font-size: 15px;
-  font-family: GilroyRegular, sans-serif;
-  color: rgb(255, 255, 255);
-}
-
-.macaroon__price {
-  grid-column: 1;
-  grid-row: 2;
-  font-size: 15px;
-  font-family: GilroyRegular, sans-serif;
-  color: rgb(255, 255, 255);
-}
-
-.macaroon__order {
-  grid-column: 2;
-  grid-row: 1 / 3;
-  width: 130px;
-  height: 50px;
-  border-radius: 25px;
-  font-size: 16px;
-  padding: 20px;
-  line-height: 5px;
 }
 
 .order {

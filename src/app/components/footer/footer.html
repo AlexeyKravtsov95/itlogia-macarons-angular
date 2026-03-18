@@ -25,18 +25,20 @@
       </div>
       </a>
     </div>
-    <a href="tel:{{ phoneNumber }}" class="footer__phone">{{ phoneNumber }}</a>
+    <a href="tel:{{ phoneNumber | numberPhone }}" class="footer__phone">{{ phoneNumber | numberPhone}}</a>
   </div>
-  @if (showPresent) {
-    <div class="present">
-      <div class="present__wrapper">
-        <div class="present__popup">
-          Оформите заказ
-          и получите подарок!
+  @if (cartService.count > 0) {
+    <div class="cart">
+      <div class="cart_wrapper">
+        <div class="cart__popup">
+          {{
+            cartService.sum | currency : 'руб.' : 'symbol' : '1.2' : 'ru-RU'
+          }}
         </div>
-        <div class="present__logo">
-          <img src="images/present.png" alt="present" class="present__logo-img">
+        <div class="cart__logo">
+          <img src="images/cart.png" alt="present" class="cart__logo-img">
         </div>
+        <div class="cart__count">{{ cartService.count }}</div>
       </div>
     </div>
   }

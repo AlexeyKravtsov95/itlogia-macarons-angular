@@ -1,0 +1,17 @@
+<div class="macaroon">
+  <div class="macaroon__image">
+    <img src="images/{{ macaroon.image }}" alt="First Macaroon Image" class="macaroon__image-img">
+  </div>
+  <div class="macaroon__content">
+    <div class="macaroon__title">{{ macaroon.title }}</div>
+    <div class="macaroon__order-block">
+      <div class="macaroon__count">{{ macaroon.count }}</div>
+      <div class="macaroon__price">{{ macaroon.price | currency : 'руб.' : 'symbol' : '1.2' : 'ru-RU' }}</div>
+      <div class="btn macaroon__order"
+           buttonEffect
+           [btnEffectDefaultColor] = "'linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%)'"
+           [btnEffectFocusColor] = "'linear-gradient(90deg, rgb(87, 52, 57) 0%, rgb(215, 72, 92) 100%)'"
+           (click)="addMacaroonToCart()">Заказать</div>
+    </div>
+  </div>
+</div>

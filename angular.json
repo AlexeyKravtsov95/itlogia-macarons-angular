@@ -13,6 +13,9 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "sourceLocale": "ru-RU"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -29,9 +32,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
@@ -39,7 +40,8 @@
             },
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
             "production": {

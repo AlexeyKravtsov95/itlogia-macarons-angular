@@ -10,7 +10,13 @@
         Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
       </h2>
       <div class="main__actions">
-        <button class="btn main__btn" (click)="scrollTo(macaroonsElement)">Выбрать макарун</button>
+        <button class="btn main__btn"
+                buttonEffect
+                [btnEffectDefaultColor]="'linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%)'"
+                [btnEffectFocusColor]="'linear-gradient(90deg, rgb(87, 52, 57) 0%, rgb(215, 72, 92) 100%)'"
+                (click)="scrollTo(macaroonsElement)"
+        >Выбрать макарун
+        </button>
       </div>
     </div>
     <div class="main__image">
@@ -33,38 +39,18 @@
     </div>
   </div>
 </section>
-<section class="advantages">
-  <div class="container advantages__container">
-    <div class="advantages__items">
-      @for (advantage of advantages; track advantage.title; let i = $index) {
-        <div class="advantage">
-          <div class="advantage__number">{{ i + 1 }}</div>
-          <div class="advantage__title">{{ advantage.title }}</div>
-          <div class="advantage__text">{{ advantage.text }}</div>
-        </div>
-      }
-    </div>
-  </div>
-</section>
+
+<advantages-component></advantages-component>
 
 <section class="macaroons" id="macaroons" #macaroonsElement>
   <div class="container macaroons__container">
     <h3 class="macaroons__title">Выберите свой макарун</h3>
     <div class="macaroons__items">
-      @for (macaroon of macaroons; track macaroon.image;) {
-        <div class="macaroon">
-          <div class="macaroon__image">
-            <img src="images/{{ macaroon.image }}" alt="First Macaroon Image" class="macaroon__image-img">
-          </div>
-          <div class="macaroon__content">
-            <div class="macaroon__title">{{ macaroon.title }}</div>
-            <div class="macaroon__order-block">
-              <div class="macaroon__count">{{ macaroon.count }}</div>
-              <div class="macaroon__price">{{ macaroon.price }}</div>
-              <div class="btn macaroon__order" (click)="addToOrder(macaroon, orderElement)">Заказать</div>
-            </div>
-          </div>
-        </div>
+      @for (macaroon of macaroons; track macaroon.image; ) {
+        <macaroons-component
+          [macaroon]="macaroon"
+          (addToCartEvent)="addToOrder($event, orderElement)"
+        />
       }
     </div>
   </div>
@@ -106,7 +92,12 @@
                placeholder="+375 (__) ___ - __ - __"
                [(ngModel)]="orderValues.phonePerson"
         >
-        <div class="btn order__place-order" (click)="createOrder()">Оформить заказ</div>
+        <div class="btn order__place-order"
+             buttonEffect
+             [btnEffectDefaultColor]="'linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%)'"
+             [btnEffectFocusColor]="'linear-gradient(90deg, rgb(87, 52, 57) 0%, rgb(215, 72, 92) 100%)'"
+             (click)="createOrder()">Оформить заказ
+        </div>
       </div>
     </div>
   </div>

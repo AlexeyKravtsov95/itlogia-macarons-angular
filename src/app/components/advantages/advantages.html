@@ -1,0 +1,13 @@
+<section class="advantages">
+  <div class="container advantages__container">
+    <div class="advantages__items">
+      @for (advantage of advantages; track advantage.title; let i = $index) {
+        <div class="advantage">
+          <div class="advantage__number">{{ i + 1 }}</div>
+          <div class="advantage__title">{{ advantage.title }}</div>
+          <div class="advantage__text">{{ advantage.text | shortText }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
